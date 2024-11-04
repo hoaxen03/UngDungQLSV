@@ -99,13 +99,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BCDiemTheoKhoaHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BCDiemTheoKhoaHoc.Designer.cs">
+      <DependentUpon>BCDiemTheoKhoaHoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BCSLSVTheoKhoa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BCSLSVTheoKhoa.Designer.cs">
+      <DependentUpon>BCSLSVTheoKhoa.cs</DependentUpon>
+    </Compile>
     <Compile Include="BCSVTheoKhoa.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="BCSVTheoKhoa.Designer.cs">
       <DependentUpon>BCSVTheoKhoa.cs</DependentUpon>
     </Compile>
+    <Compile Include="CourseCountDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CourseCountDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataAccessLayer.cs" />
+    <Compile Include="StudentAverageGradeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StudentAverageGradeDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,6 +161,11 @@
       <DependentUpon>QLDiemSo.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="StudentCountDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StudentCountDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="StudentDepartmentDataSet.cs">
       <DependentUpon>StudentDepartmentDataSet.xsd</DependentUpon>
     </Compile>
@@ -147,6 +174,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>StudentDepartmentDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="TKSLKHTheoKhoa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TKSLKHTheoKhoa.Designer.cs">
+      <DependentUpon>TKSLKHTheoKhoa.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BCDiemTheoKhoaHoc.resx">
+      <DependentUpon>BCDiemTheoKhoaHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BCSLSVTheoKhoa.resx">
+      <DependentUpon>BCSLSVTheoKhoa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BCSVTheoKhoa.resx">
       <DependentUpon>BCSVTheoKhoa.cs</DependentUpon>
     </EmbeddedResource>
@@ -174,7 +213,38 @@
     <EmbeddedResource Include="QLDiemSo.resx">
       <DependentUpon>QLDiemSo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="StudentDepartmentReport.rdlc" />
+    <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="Report2.rdlc" />
+    <EmbeddedResource Include="StudentAverageGradeByCourseReport.rdlc" />
+    <EmbeddedResource Include="StudentCountByDepartmentReport.rdlc" />
+    <EmbeddedResource Include="TKSLKHTheoKhoa.resx">
+      <DependentUpon>TKSLKHTheoKhoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include=".xsc">
+      <DependentUpon>StudentAverageGradeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CourseCountDataSet.xsc">
+      <DependentUpon>CourseCountDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CourseCountDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CourseCountDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="CourseCountDataSet.xss">
+      <DependentUpon>CourseCountDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="StudentAverageGradeDataSet.xsc">
+      <DependentUpon>StudentAverageGradeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="StudentAverageGradeDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StudentAverageGradeDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include=".xss">
+      <DependentUpon>StudentAverageGradeDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -185,6 +255,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="StudentCountDataSet.xsc">
+      <DependentUpon>StudentCountDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="StudentCountDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StudentCountDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="StudentCountDataSet.xss">
+      <DependentUpon>StudentCountDataSet.xsd</DependentUpon>
+    </None>
     <None Include="StudentDepartmentDataSet.xsc">
       <DependentUpon>StudentDepartmentDataSet.xsd</DependentUpon>
     </None>

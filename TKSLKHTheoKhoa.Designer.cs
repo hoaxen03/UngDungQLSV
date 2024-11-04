@@ -1,6 +1,6 @@
 ﻿namespace UngDungQLSV
 {
-    partial class BCSVTheoKhoa
+    partial class TKSLKHTheoKhoa
     {
         /// <summary>
         /// Required designer variable.
@@ -33,22 +33,22 @@
             // 
             // reportViewer1
             // 
-            this.reportViewer1.LocalReport.ReportPath = "D:\\UngDungQLSV\\Report1.rdlc";
+            this.reportViewer1.LocalReport.ReportPath = "D:\\UngDungQLSV\\Report2.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(12, 12);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(972, 426);
+            this.reportViewer1.Size = new System.Drawing.Size(917, 426);
             this.reportViewer1.TabIndex = 0;
             // 
-            // BCSVTheoKhoa
+            // TKSLKHTheoKhoa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(996, 450);
+            this.ClientSize = new System.Drawing.Size(941, 450);
             this.Controls.Add(this.reportViewer1);
-            this.Name = "BCSVTheoKhoa";
-            this.Text = "BCSVTheoKhoa";
-            this.Load += new System.EventHandler(this.BCSVTheoKhoa_Load);
+            this.Name = "TKSLKHTheoKhoa";
+            this.Text = "TKSLKHTheoKhoa";
+            this.Load += new System.EventHandler(this.TKSLKHTheoKhoa_Load);
             this.ResumeLayout(false);
 
         }

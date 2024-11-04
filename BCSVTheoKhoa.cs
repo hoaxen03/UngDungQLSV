@@ -1,14 +1,8 @@
 ﻿using Microsoft.Reporting.WinForms;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 using System.Windows.Forms;
+using UngDungQLSV.StudentDepartmentDataSetTableAdapters;
 
 
 namespace UngDungQLSV
@@ -20,43 +14,28 @@ namespace UngDungQLSV
             InitializeComponent();
         }
 
-        // Biến này để lưu tên khoa cần lọc
-        public string DepartmentFilter { get; set; }
 
         // Hàm xử lý khi form load
         private void BCSVTheoKhoa_Load(object sender, EventArgs e)
         {
             // Gọi hàm LoadReport khi form được tải, truyền DepartmentFilter vào
-            LoadReport(DepartmentFilter);
+            LoadReport();
         }
 
         // Hàm tải dữ liệu và hiển thị báo cáo
-        private void LoadReport(string departmentFilter)
+        private void LoadReport()
         {
-            // Cấu hình ReportViewer
-            reportViewer1.ProcessingMode = ProcessingMode.Local;
-            reportViewer1.LocalReport.ReportPath = "D:\\UngDungQLSV\\StudentDepartmentReport.rdlc"; // Đường dẫn tới file RDLC
+            // Tạo instance của dataset
+            var dataset = new StudentDepartmentDataSet();
 
-            // Lấy dữ liệu sinh viên theo tên khoa
-            if (!string.IsNullOrEmpty(departmentFilter))
-            {
-                DataTable studentData = GetStudentsByDepartment1(departmentFilter);
-                ReportDataSource rdsStudent = new ReportDataSource("StudentByDepartmentDataSet", studentData); // Tên dataset phải khớp với tên trong file RDLC
+            // Sử dụng TableAdapter để điền dữ liệu vào DataTable trong DataSet
+            var adapter = new View_StudentByDepartmentTableAdapter();
+            adapter.Fill(dataset.View_StudentByDepartment);
 
-                // Xóa dữ liệu cũ và thêm dữ liệu mới vào báo cáo
-                reportViewer1.LocalReport.DataSources.Clear();
-                reportViewer1.LocalReport.DataSources.Add(rdsStudent);
-            }
-
-            // Làm mới báo cáo để hiển thị dữ liệu mới
+            // Gán DataSource cho ReportViewer
+            reportViewer1.LocalReport.DataSources.Clear();
+            reportViewer1.LocalReport.DataSources.Add(new ReportDataSource("DataSet1", dataset.Tables["View_StudentByDepartment"]));
             reportViewer1.RefreshReport();
-        }
-
-        // Hàm lấy dữ liệu sinh viên theo khoa từ lớp DataAccessLayer
-        private DataTable GetStudentsByDepartment1(string departmentName)
-        {
-            DataAccessLayer dal = new DataAccessLayer();
-            return dal.SearchByDepartmentName1(departmentName); // Gọi phương thức tìm kiếm đã có
         }
     }
 }

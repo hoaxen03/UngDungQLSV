@@ -43,7 +43,9 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.cmbDepartment = new System.Windows.Forms.ComboBox();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -180,28 +182,52 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(149, 530);
+            this.button6.Location = new System.Drawing.Point(16, 531);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(79, 73);
+            this.button6.Size = new System.Drawing.Size(133, 76);
             this.button6.TabIndex = 49;
             this.button6.Text = "Báo cáo sinh viên ";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.btnShowReport_Click);
             // 
-            // cmbDepartment
+            // button7
             // 
-            this.cmbDepartment.FormattingEnabled = true;
-            this.cmbDepartment.Location = new System.Drawing.Point(16, 530);
-            this.cmbDepartment.Name = "cmbDepartment";
-            this.cmbDepartment.Size = new System.Drawing.Size(127, 21);
-            this.cmbDepartment.TabIndex = 50;
+            this.button7.Location = new System.Drawing.Point(171, 531);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(148, 76);
+            this.button7.TabIndex = 50;
+            this.button7.Text = "Điểm trung bình theo từng khóa học";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(352, 531);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(152, 76);
+            this.button8.TabIndex = 51;
+            this.button8.Text = "Thống kê SL Sinh Viên  Theo Khoa";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(564, 531);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(171, 76);
+            this.button9.TabIndex = 52;
+            this.button9.Text = "Thống kê SL Khóa học  theo khoa";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(942, 749);
-            this.Controls.Add(this.cmbDepartment);
+            this.Controls.Add(this.button9);
+            this.Controls.Add(this.button8);
+            this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
@@ -244,7 +270,9 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.ComboBox cmbDepartment;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button9;
     }
 }
 

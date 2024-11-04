@@ -405,31 +405,6 @@ namespace UngDungQLSV
             return dt;
         }
 
-        public DataTable SearchByDepartmentName1(string departmentName)
-        {
-            DataTable dtStudents = new DataTable();
-
-            string query = @"
-        SELECT s.StudentID, s.FirstName, s.LastName, s.DateOfBirth, s.Gender, d.DepartmentName
-        FROM Students s
-        INNER JOIN Departments d ON s.DepartmentID = d.DepartmentID
-        WHERE d.DepartmentName LIKE @DepartmentName";
-
-            using (SqlConnection conn = new SqlConnection(connectionString))
-            {
-                using (SqlCommand cmd = new SqlCommand(query, conn))
-                {
-                    cmd.Parameters.AddWithValue("@DepartmentName", "%" + departmentName + "%");
-
-                    conn.Open();
-                    SqlDataAdapter da = new SqlDataAdapter(cmd);
-                    da.Fill(dtStudents);
-                }
-            }
-
-            return dtStudents;
-        }
-
 
     }
 }

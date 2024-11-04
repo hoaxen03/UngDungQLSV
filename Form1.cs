@@ -52,10 +52,6 @@ namespace UngDungQLSV
             dataGridView.DataSource = dt; // Gán DataTable cho DataGridView
             DataTable dtDepartments = dal.GetDepartments();
 
-            // Thiết lập dữ liệu cho ComboBox
-            cmbDepartment.DataSource = dtDepartments;
-            cmbDepartment.DisplayMember = "DepartmentName"; // Tên hiển thị
-            cmbDepartment.ValueMember = "DepartmentID"; // Giá trị lưu trữ
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -196,14 +192,36 @@ namespace UngDungQLSV
         {
             BCSVTheoKhoa reportForm = new BCSVTheoKhoa();
 
-            // Giả sử cmbDepartment chứa danh sách các khoa
-            // Sử dụng SelectedValue, nếu SelectedValue là kiểu string hoặc có thể chuyển đổi sang string
-            reportForm.DepartmentFilter = cmbDepartment.SelectedValue.ToString();
+            reportForm.Show();
 
-            reportForm.ShowDialog();
         }
 
+        private void button7_Click(object sender, EventArgs e)
+        {
+            BCDiemTheoKhoaHoc reportForm = new BCDiemTheoKhoaHoc();
 
+            reportForm.Show();
+
+
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            BCSLSVTheoKhoa reportForm = new BCSLSVTheoKhoa();
+
+            reportForm.Show();
+
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            TKSLKHTheoKhoa reportForm = new TKSLKHTheoKhoa();
+
+            reportForm.Show();
+
+
+
+        }
     }
 }
 

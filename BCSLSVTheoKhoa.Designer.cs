@@ -1,6 +1,6 @@
 ﻿namespace UngDungQLSV
 {
-    partial class BCSVTheoKhoa
+    partial class BCSLSVTheoKhoa
     {
         /// <summary>
         /// Required designer variable.
@@ -33,22 +33,22 @@
             // 
             // reportViewer1
             // 
-            this.reportViewer1.LocalReport.ReportPath = "D:\\UngDungQLSV\\Report1.rdlc";
+            this.reportViewer1.LocalReport.ReportPath = "D:\\UngDungQLSV\\StudentCountByDepartmentReport.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(12, 12);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(972, 426);
+            this.reportViewer1.Size = new System.Drawing.Size(973, 444);
             this.reportViewer1.TabIndex = 0;
             // 
-            // BCSVTheoKhoa
+            // BCSLSVTheoKhoa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(996, 450);
+            this.ClientSize = new System.Drawing.Size(997, 468);
             this.Controls.Add(this.reportViewer1);
-            this.Name = "BCSVTheoKhoa";
-            this.Text = "BCSVTheoKhoa";
-            this.Load += new System.EventHandler(this.BCSVTheoKhoa_Load);
+            this.Name = "BCSLSVTheoKhoa";
+            this.Text = "BCSLSVTheoKhoa";
+            this.Load += new System.EventHandler(this.BCSLSVTheoKhoa_Load);
             this.ResumeLayout(false);
 
         }

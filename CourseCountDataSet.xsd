@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="CourseCountDataSet" targetNamespace="http://tempuri.org/CourseCountDataSet.xsd" xmlns:mstns="http://tempuri.org/CourseCountDataSet.xsd" xmlns="http://tempuri.org/CourseCountDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="StudentManagementConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="StudentManagementConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.UngDungQLSV.Properties.Settings.GlobalReference.Default.StudentManagementConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_CourseCountByDepartmentTableAdapter" GeneratorDataComponentClassName="View_CourseCountByDepartmentTableAdapter" Name="View_CourseCountByDepartment" UserDataComponentName="View_CourseCountByDepartmentTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="StudentManagementConnectionString (Settings)" DbObjectName="StudentManagement.dbo.View_CourseCountByDepartment" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT DepartmentID, DepartmentName, CourseCount FROM dbo.View_CourseCountByDepartment</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="DepartmentID" DataSetColumn="DepartmentID" />
+              <Mapping SourceColumn="DepartmentName" DataSetColumn="DepartmentName" />
+              <Mapping SourceColumn="CourseCount" DataSetColumn="CourseCount" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="CourseCountDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="CourseCountDataSet" msprop:Generator_DataSetName="CourseCountDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="View_CourseCountByDepartment" msprop:Generator_RowEvHandlerName="View_CourseCountByDepartmentRowChangeEventHandler" msprop:Generator_RowDeletedName="View_CourseCountByDepartmentRowDeleted" msprop:Generator_RowDeletingName="View_CourseCountByDepartmentRowDeleting" msprop:Generator_RowEvArgName="View_CourseCountByDepartmentRowChangeEvent" msprop:Generator_TablePropName="View_CourseCountByDepartment" msprop:Generator_RowChangedName="View_CourseCountByDepartmentRowChanged" msprop:Generator_RowChangingName="View_CourseCountByDepartmentRowChanging" msprop:Generator_TableClassName="View_CourseCountByDepartmentDataTable" msprop:Generator_RowClassName="View_CourseCountByDepartmentRow" msprop:Generator_TableVarName="tableView_CourseCountByDepartment" msprop:Generator_UserTableName="View_CourseCountByDepartment">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DepartmentID" msprop:Generator_ColumnPropNameInRow="DepartmentID" msprop:Generator_ColumnPropNameInTable="DepartmentIDColumn" msprop:Generator_ColumnVarNameInTable="columnDepartmentID" msprop:Generator_UserColumnName="DepartmentID" type="xs:int" />
+              <xs:element name="DepartmentName" msprop:Generator_ColumnPropNameInRow="DepartmentName" msprop:Generator_ColumnPropNameInTable="DepartmentNameColumn" msprop:Generator_ColumnVarNameInTable="columnDepartmentName" msprop:Generator_UserColumnName="DepartmentName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CourseCount" msprop:Generator_ColumnPropNameInRow="CourseCount" msprop:Generator_ColumnPropNameInTable="CourseCountColumn" msprop:Generator_ColumnVarNameInTable="columnCourseCount" msprop:Generator_UserColumnName="CourseCount" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:View_CourseCountByDepartment" />
+      <xs:field xpath="mstns:DepartmentID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
