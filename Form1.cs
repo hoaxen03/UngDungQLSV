@@ -177,7 +177,7 @@ namespace UngDungQLSV
             // Kiểm tra xem bảng hiện tại có phải là bảng "Điểm số" không
             if (currentTableName != "Đăng ký")
             {
-                MessageBox.Show("Vui lòng chọn bảng 'Điểm số' trước khi sử dụng chức năng này.", "Lỗi truy cập", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Vui lòng chọn bảng 'Đăng ký' trước khi sử dụng chức năng này.", "Lỗi truy cập", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return; // Không cho phép truy cập form quản lý điểm số nếu không phải bảng điểm số
             }
 

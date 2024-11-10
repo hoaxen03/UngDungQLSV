@@ -193,7 +193,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 9);
+            this.label2.Location = new System.Drawing.Point(44, 21);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(115, 13);
             this.label2.TabIndex = 44;
@@ -222,6 +222,8 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Name = "QLBangSV";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.Location = new System.Drawing.Point(800, 50);
             this.Text = "QLBangSV";
             this.Load += new System.EventHandler(this.QLBangSV_Load);
             this.ResumeLayout(false);

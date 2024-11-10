@@ -364,15 +364,15 @@ namespace UngDungQLSV
         }
         public void DeleteGrade(int enrollmentId)
         {
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                string query = "DELETE FROM Enrollments WHERE EnrollmentID = @EnrollmentID";
-                using (SqlCommand command = new SqlCommand(query, connection))
-                {
-                    command.Parameters.AddWithValue("@EnrollmentID", enrollmentId);
+            string query = "UPDATE Enrollments SET Grade = NULL WHERE EnrollmentID = @EnrollmentID";
 
-                    connection.Open();
-                    command.ExecuteNonQuery();
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@EnrollmentID", enrollmentId);
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
                 }
             }
         }

@@ -51,14 +51,14 @@
             // 
             // txtGrade
             // 
-            this.txtGrade.Location = new System.Drawing.Point(32, 163);
+            this.txtGrade.Location = new System.Drawing.Point(32, 149);
             this.txtGrade.Name = "txtGrade";
             this.txtGrade.Size = new System.Drawing.Size(100, 20);
             this.txtGrade.TabIndex = 1;
             // 
             // txtEnrollmentID
             // 
-            this.txtEnrollmentID.Location = new System.Drawing.Point(32, 215);
+            this.txtEnrollmentID.Location = new System.Drawing.Point(32, 190);
             this.txtEnrollmentID.Name = "txtEnrollmentID";
             this.txtEnrollmentID.Size = new System.Drawing.Size(100, 20);
             this.txtEnrollmentID.TabIndex = 2;
@@ -66,16 +66,17 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(157, 9);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(52, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(83, 13);
+            this.label1.Size = new System.Drawing.Size(282, 39);
             this.label1.TabIndex = 3;
             this.label1.Text = "Quản lý điểm số";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(29, 147);
+            this.label2.Location = new System.Drawing.Point(29, 132);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(31, 13);
             this.label2.TabIndex = 4;
@@ -93,7 +94,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(29, 188);
+            this.label4.Location = new System.Drawing.Point(29, 174);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(108, 13);
             this.label4.TabIndex = 6;
@@ -101,7 +102,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(146, 59);
+            this.button1.Location = new System.Drawing.Point(57, 59);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 7;
@@ -111,7 +112,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(227, 59);
+            this.button2.Location = new System.Drawing.Point(147, 59);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 8;
@@ -121,7 +122,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(307, 59);
+            this.button3.Location = new System.Drawing.Point(240, 59);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 9;
@@ -163,6 +164,8 @@
             this.Controls.Add(this.txtEnrollmentID);
             this.Controls.Add(this.txtGrade);
             this.Controls.Add(this.txtStudentID);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.Location = new System.Drawing.Point(800, 50);
             this.Name = "QLDiemSo";
             this.Text = "QLDiemSo";
             this.Load += new System.EventHandler(this.QLDiemSo_Load);
